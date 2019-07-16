@@ -11,6 +11,11 @@ const app = new Vue({
         error: null,
         list: ['사과', '바나나', '딸기'],
         num: 1,
+        scroll: 0,
     },
+    mounted: function() {
+        console.log('mounted')
+        this.scroll = 100
+    }
 })
 state.count++

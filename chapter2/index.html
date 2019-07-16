@@ -9,14 +9,24 @@
 </head>
 <body>
     <div id="app">
-        <p>{{ message }}</p>
+        <!-- <p>{{ message }}</p>
         <p>{{ state.count }}</p>
         <p>{{ message.length }}</p>
         <p>{{ list[2] }}</p>
         <p>{{ list[num] }}</p>
         <p>{{ 1 + 1 }}</p>
         <input type="text" v-bind:value="message">
-        <input type="text" :value="message">
+        <input type="text" :value="message"> -->
+
+        <!-- v-bind 장식자 -->
+        <div v-bind:text-content.prop="message">...</div>
+        <div v-bind:scroll-top.prop="scroll">...
+            <p>test1</p>
+            <p>test2</p>
+            <p>test3</p>
+            <p>test4</p>
+            <p>test5</p>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="main.js"></script>
