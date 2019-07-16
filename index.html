@@ -12,7 +12,10 @@
         <p>{{message}}</p>
         <input v-model="message">
         <input v-model.number="count">
-        <p v-if="show">Hello Vue.js!!</p>
+        <button v-on:click="show=!show">변경하기</button>
+        <transition>
+            <p v-if="show">Hello Vue.js!!</p>
+        </transition>
         <ol>
             <li v-for="item in list">{{item}}</li>
         </ol>

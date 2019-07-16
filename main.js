@@ -7,8 +7,11 @@ var app = new Vue({
         show: true,
     },
     methods: {
-        handleClick:function(event) {
+        handleClick: function(event) {
             alert(event.target)
-        }
-    }
+        },
+    },
+    created: function() {
+        console.log('created')
+    },
 })
