@@ -19,14 +19,19 @@
         <input type="text" :value="message"> -->
 
         <!-- v-bind 장식자 -->
-        <div v-bind:text-content.prop="message">...</div>
+        <!-- <div v-bind:text-content.prop="message">...</div>
         <div v-bind:scroll-top.prop="scroll">...
             <p>test1</p>
             <p>test2</p>
             <p>test3</p>
             <p>test4</p>
             <p>test5</p>
-        </div>
+        </div> -->
+
+        <!-- <pre>{{ $data }}</pre> -->
+
+        <p>{{count}} 번 클릭 했습니다.</p>
+        <button v-on:click="increment">카운트 하기</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="main.js"></script>

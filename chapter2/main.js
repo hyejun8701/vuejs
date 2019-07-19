@@ -12,10 +12,16 @@ const app = new Vue({
         list: ['사과', '바나나', '딸기'],
         num: 1,
         scroll: 0,
+        count: 0,
     },
     mounted: function() {
         console.log('mounted')
         this.scroll = 100
+    },
+    methods: {
+        increment: function() {
+            this.count++
+        }
     }
 })
 state.count++
