@@ -5,5 +5,6 @@ const app = new Vue({
         isActive: true,
         textColor: 'red',
         bgColor: 'lightgray',
+        otherClass: 'other',
     }
 })
