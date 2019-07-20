@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js App</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- <img src="image.jpg" v-on:load="show=true" v-bind:class="{hide:!show}"> -->
+
+        <!-- <div v-on:scroll="handle($event)">스크롤
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda amet, fugit pariatur necessitatibus inventore magni eligendi alias sed incidunt ea veritatis, fugiat mollitia unde tenetur placeat ipsum accusamus quae quasi!
+            </p>
+        </div>
+        <div v-on:mousewheel="handle($event)">마우스휠</div>
+        <div v-on:dragstart="handle($event)" draggable>드래그</div> -->
+
+        <!-- <input v-bind:value="message" v-on:input="handleInput"> -->
+
+        <div v-on:click.right="handle">example</div>
+        <div v-on:click.right.prevent="handle">example</div>
+
+        <div v-on:click="handle2('div1')">
+            div1
+            <a href="#top" v-on:click.stop="handle2('div2')">div2</a>
+            <!-- stop 이벤트 장식자로 이벤트 버블링을 막을 수 있다.
+            여기서 stop 을 빼고 앵커를 클릭하면 div2 div1 이 모두 출력되버린다.
+            이벤트버블링: 타켓요소부터 부모요소까지 이벤트가 전달되어 실행되는 것
+            -->
+        </div>
+
+        <div v-on:click="handle2('div1')">
+            div1
+            <a href="#top" v-on:click.prevent="handle2('div2')">div2</a>
+        </div>
+
+        <div v-on:click.capture="handle('div1')">
+            div1
+            <div v-on:click="handle('div2')">
+                div2
+                <div v-on:click="handle('div3')">
+                    div3
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay" v-on:click.self="close">...</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

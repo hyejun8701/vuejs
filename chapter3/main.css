@@ -1,0 +1,16 @@
+/* img {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+img.hide {
+    opacity: 0;
+}
+
+#app > div {
+    float: right;
+    height: 50px;
+    width: 200px;
+    border: 1px solid red;
+    overflow-y: scroll;
+} */
