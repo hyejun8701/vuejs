@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js App</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <p ref="hello">Hello</p>
+        <button v-on:click="handleClick">Count Up</button>
+        <button v-on:click="show=!show">표시/비표시</button>
+        <span ref="count" v-if="show">0</span>
+        <a v-bind:href="url" v-pre>Hello {{ message }}</a>
+        <a v-bind:href="url" v-once>Hello {{ message }}</a>
+        <span v-text="message"></span>
+        <span v-html="message2"></span>
+
+
+        <button @click="setToggle">토글</button>
+        <div v-if="toggle">
+            A <input type="text" key="a">
+        </div>
+        <div v-else>
+            B <input type="text" key="b">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

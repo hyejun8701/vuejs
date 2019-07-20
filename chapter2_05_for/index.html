@@ -35,7 +35,7 @@
         <ul>
             <li v-for="(item, index) in list" v-bind:key="item.id">
                 ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-                <!-- <button v-on:click="doRemove(index)">몬스터 제거하기</button> -->
+                <button v-on:click="doRemove(index)">몬스터 제거하기</button>
                 <span v-if="item.hp < 50">큰 피해...!</span>
                 <button v-on:click="doAttack(index)">공격하기</button>
             </li>
