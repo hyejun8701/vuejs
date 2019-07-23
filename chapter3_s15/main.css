@@ -1,0 +1,9 @@
+[v-cloak] {
+    display: none;
+}
+
+.content {
+    height: 700px;
+    overflow: scroll;
+    border: 1px solid red;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js App</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5"></script>
+    <div id="app" v-cloak>
+        <header v-bind:class="{ compact: scrollY > 200 }">
+            200px 이상 스크롤했으면, .compact 클래스 추가하기
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptate reiciendis, ipsum eos debitis facilis repellendus praesentium excepturi laborum provident necessitatibus commodi ab maiores minus facere! Eius modi iusto cupiditate?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati inventore temporibus facere alias maiores minus est, eveniet fuga repellat quasi quam numquam mollitia voluptatum iure fugit vel quod dolores? Eum.
+            </p>
+        </header>
+
+        <div class="content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus qui dolorem praesentium quo et molestias nobis, sit unde, ex debitis ut repudiandae aperiam ad quibusdam voluptates perspiciatis ab architecto magnam?
+        </div>
+        <div v-on:click="scrollTop">
+            페이지 상단으로 이동하기
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
