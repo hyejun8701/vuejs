@@ -9,7 +9,18 @@
 </head>
 <body>
     <div id="app" v-cloak>
-        
+        <input v-model.number="budget">원 이하 필터링하기
+        <input v-model.number="limit">개의 결과 출력하기
+        <p>{{ matched.length }}개 중에 {{ limited.length }}개를 출력하고 있습니다.</p>
+        <ul>
+            <li v-for="item in sorted" v-bind:key="item.id">
+                {{ item.name }} {{ item.price }}원
+            </li>
+        </ul>
+        <button v-on:click="order=!order">변경하기</button>
+        <p>
+            {{ filteredList }}
+        </p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
