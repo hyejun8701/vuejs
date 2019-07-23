@@ -21,19 +21,19 @@
 
         <!-- <input v-bind:value="message" v-on:input="handleInput"> -->
 
-        <div v-on:click.right="handle">example</div>
-        <div v-on:click.right.prevent="handle">example</div>
+        <!-- <div v-on:click.right="handle">example</div>
+        <div v-on:click.right.prevent="handle">example</div> -->
 
-        <div v-on:click="handle2('div1')">
+        <!-- <div v-on:click="handle2('div1')">
             div1
             <a href="#top" v-on:click.stop="handle2('div2')">div2</a>
-            <!-- stop 이벤트 장식자로 이벤트 버블링을 막을 수 있다.
-            여기서 stop 을 빼고 앵커를 클릭하면 div2 div1 이 모두 출력되버린다.
-            이벤트버블링: 타켓요소부터 부모요소까지 이벤트가 전달되어 실행되는 것
-            -->
-        </div>
+        </div> -->
+        <!-- stop 이벤트 장식자로 이벤트 버블링을 막을 수 있다.
+        여기서 stop 을 빼고 앵커를 클릭하면 div2 div1 이 모두 출력되버린다.
+        이벤트버블링: 타켓요소부터 부모요소까지 이벤트가 전달되어 실행되는 것
+        -->
 
-        <div v-on:click="handle2('div1')">
+        <!-- <div v-on:click="handle2('div1')">
             div1
             <a href="#top" v-on:click.prevent="handle2('div2')">div2</a>
         </div>
@@ -48,7 +48,39 @@
             </div>
         </div>
 
-        <div class="overlay" v-on:click.self="close">...</div>
+        <div class="overlay" v-on:click.self="close">...</div> -->
+
+        <p>
+            13 <input v-on:keydown.13="handle">
+        </p>
+        <p>
+            enter <input v-on:keydown.enter="handle">
+        </p>
+        <p>
+            tab <input v-on:keydown.tab="handle">
+        </p>
+        <p>
+            delete <input v-on:keydown.delete="handle">
+        </p>
+        <p>
+            esc <input v-on:keydown.esc="handle">
+        </p>
+        <p>
+            space <input v-on:keydown.space="handle">
+        </p>
+        <p>
+            up <input v-on:keydown.up="handle">
+        </p>
+        <p>
+            down <input v-on:keydown.down="handle">
+        </p>
+        <p>
+            left <input v-on:keydown.left="handle">
+        </p>
+        <p>
+            right <input v-on:keydown.right="handle">
+        </p>
+        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
