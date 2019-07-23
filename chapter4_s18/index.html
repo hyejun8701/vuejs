@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js App</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app" v-cloak>
+        {{ price | localeNum }}원
+        <p>
+            {{ message | filter(foo, 100) }}
+        </p>
+        <p>
+            {{ value | filter1 | filter2 }}
+        </p>
+        <p>
+            180도는 {{ 180 | radian | round }} 라디안입니다.
+        </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
