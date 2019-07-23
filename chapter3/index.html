@@ -50,7 +50,7 @@
 
         <div class="overlay" v-on:click.self="close">...</div> -->
 
-        <p>
+        <!-- <p>
             13 <input v-on:keydown.13="handle">
         </p>
         <p>
@@ -80,6 +80,14 @@
         <p>
             right <input v-on:keydown.right="handle">
         </p>
+        <p>
+            all arrow <input v-on:keydown.up.down.left.right="handle">
+        </p> -->
+
+        <button v-on:click.ctrl="handle">ctrl key</button>
+        <button v-on:click.alt="handle">alt key</button>
+        <button v-on:click.shift="handle">shift key</button>
+        <button v-on:click.meta="handle">meta key</button>
         
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>

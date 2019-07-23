@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js App</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <input v-model="message">
+        <input v-bind:value="message" v-on:input="handleInput">
+        <input :value="message" @input="handleInput">
+        <!-- : 는 바인드 축약, @ 는 이벤트 축약 -->
+        <p>
+            {{ message }}
+        </p>
+
+        <textarea :value="message" @input="handleInput"></textarea>
+        <!-- textarea 는 태그내부에 mustache 바인딩을 사용할 수 없음 -->
+        <pre>{{ message }}</pre>
+
+        <label>
+            <input type="checkbox" v-model="val">{{ val }}
+        </label>
+
+        <input type="checkbox" v-model="val" true-value="yes" false-value="no">
+
+        <label><input type="checkbox" v-model="val2" value="A">A</label>
+        <label><input type="checkbox" v-model="val2" value="B">B</label>
+        <label><input type="checkbox" v-model="val2" value="C">C</label>
+        <p>{{ val2 }}</p>
+
+        <label><input type="radio" v-model="val3" value="A">A</label>
+        <label><input type="radio" v-model="val3" value="B">B</label>
+        <label><input type="radio" v-model="val3" value="C">C</label>
+        <p>{{ val3 }}</p>
+
+        <select v-model="val3">
+            <option disabled="disabled">선택해 주세요.</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+        <p>{{ val3 }}</p>
+
+        <select v-model="val4" multiple>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+        <p>{{ val4 }}</p>
+
+        <input type="file" v-on:change="handleChange">
+        <div v-if="preview"><img v-bind:src="preview"></div>
+
+        <input type="range" v-model.number="val5">{{ val5 }}
+
+        <input type="text" v-model.number="price">{{ price }}
+
+        <input v-model.lazy="message">
+        <input v-model.trim="message">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
