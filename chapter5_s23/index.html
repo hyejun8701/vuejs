@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js App</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <!-- <comp-child val="자식A"></comp-child>
+        <comp-child val="자식B"></comp-child> -->
+        <!-- <comp-child v-bind:val="message" class="item"></comp-child>
+        <comp-child :val="message" class="item"></comp-child>
+
+        <comp-child2 id="parent" class="parent"></comp-child2>
+
+        <ul>
+            <comp-child3 v-for="item in list" :key="item.id" :name="item.name" :hp="item.hp"></comp-child3>
+        </ul>
+
+        <ul>
+            <comp-child3 v-for="item in list" v-bind="item"></comp-child3>
+        </ul> -->
+
+        <!-- <example v-bind="object"></example> -->
+
+        <!-- <comp-child4 v-on:childs-event="parentsMethod"></comp-child4> -->
+
+        <!-- <ul>
+            <comp-child5 v-for="item in list" v-bind="item" @attack="handleAttack"></comp-child5>
+        </ul> -->
+
+        <!-- <my-icon v-on:click="handleClick"></my-icon>
+        <my-icon v-on:click.native="handleClick"></my-icon> -->
+
+        <!-- <comp-a></comp-a>
+        <comp-b></comp-b> -->
+
+        <button @click="childRef">자식 컴포넌트 참조</button>
+        <comp-child6 ref="child"></comp-child6>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
