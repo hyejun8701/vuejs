@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js App</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <!-- <input v-focus> -->
+
+        <button @click="video1=true">재생</button>
+        <button @click="video1=false">중지</button>
+        <video src="movie1.mp4" v-video="video1"></video>
+
+        <button @click="video2=true">재생</button>
+        <button @click="video2=false">중지</button>
+        <video src="movie2.mp4" v-video="video2"></video>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
