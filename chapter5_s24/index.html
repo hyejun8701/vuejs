@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js App</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <!-- <comp-child>
+            여기는 슬롯 콘텐츠입니다.
+        </comp-child>
+
+        <comp-child></comp-child>
+
+        <comp-child>
+            {{ message }}
+        </comp-child> -->
+
+        <!-- <comp-child2>
+            <header slot="header">
+                Hello Vue.js!
+            </header>
+            Vue.js는 Javascrip 프레임워크입니다.
+        </comp-child2>
+
+        <comp-child2>
+            <div slot="footer">footer</div>
+        </comp-child2> -->
+
+        <!-- <comp-child3>
+            <template slot="text1">텍스트1</template>
+            <template slot="text2">텍스트2</template>
+        </comp-child3>
+
+        <comp-child3>
+            <template slot="text1"></template>
+            <template slot="text2"></template>
+        </comp-child3> -->
+
+        <!-- <comp-child4>
+            <p slot-scope="props">
+                슬롯으로 받은 텍스트 -> {{ props.text }} {{ props.text2 }}
+            </p>
+        </comp-child4> -->
+
+        <comp-child5>
+            <li slot-scope="props">
+                {{ props.item }}
+            </li>
+        </comp-child5>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
