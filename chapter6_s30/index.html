@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js App</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <!-- <button @click="order=!order">변경하기</button>
+        <transition-group tag="ul" class="list">
+            <li v-for="item in sortedList" :key="item.id">
+                {{ item.name }} {{ item.price }}원
+            </li>
+        </transition-group>
+
+        <button @click="toggle=!toggle">변경하기</button>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <transition>
+                <my-circle v-bind:fill="fill" v-bind:key="fill"></my-circle>
+            </transition>
+        </svg> -->
+
+        <transition v-on:enter="enter" v-on:after-enter="afterEnter">
+            <div v-if="show">example</div>
+        </transition>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

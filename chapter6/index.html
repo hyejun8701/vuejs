@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js App</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <!-- <button @click="show=!show">변경하기</button>
+        <transition>
+            <div v-show="show">트랜지션하고 싶은 요소</div>
+        </transition>
+        <transition name="demo">
+            <div v-if="show">트랜지션하고 싶은 요소</div>
+        </transition>
+        <transition appear>
+            <div v-show="show">example</div>
+        </transition>
+        <transition name="demo2">
+            <div v-if="show">트랜지션하고 싶은 요소</div>
+        </transition> -->
+
+        <!-- <transition>
+            <div v-if="show" key="a">TRUE</div>
+            <div v-else key="b">FALSE</div>
+        </transition>
+
+        <transition mode="out-in">
+            <div v-if="show" key="a">TRUE</div>
+            <div v-else key="b">FALSE</div>
+        </transition>
+
+        <transition mode="in-out">
+            <div v-if="show" key="a">TRUE</div>
+            <div v-else key="b">FALSE</div>
+        </transition>
+        
+        <button @click="count++">변경하기</button>
+        <transition>
+            <div v-bind:key="count">
+                {{ count }}
+            </div>
+        </transition>
+        -->
+
+        <transition>
+            <my-label v-bind:count="count" v-bind:key="count"></my-label>
+        </transition>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

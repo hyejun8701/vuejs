@@ -9,13 +9,28 @@
 </head>
 <body>
     <div id="app" v-cloak>
-        <functional-component></functional-component>
+        <!-- <functional-component></functional-component>
         <template functional>
             <p>단일 파일 컴포넌트라면 레더링 함수가 필요하지 않음</p>
         </template>
 
         <button @click="current^=1">toggle</button>
         <div v-bind:is="component"></div>
+
+        <my-component-a2></my-component-a2>
+        <my-component-b2></my-component-b2>
+        <div v-if="show">
+            <my-component></my-component>
+        </div>
+        <my-component v-if="show"></my-component>
+        <child-comp1 v-if="show"></child-comp1>
+        <child-comp2></child-comp2> -->
+
+        <button v-on:click="current='comp-board'">메세지 목록</button>
+        <button v-on:click="current='comp-form'">글쓰기 양식</button>
+        <keep-alive>
+            <div v-bind:is="current"></div>
+        </keep-alive>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>

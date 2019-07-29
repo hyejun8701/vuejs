@@ -1,0 +1,37 @@
+[v-cloak] {
+    display: none;
+}
+
+.v-enter-active, .v-leave-active {
+    transition: opacity 1s;
+}
+
+.v-enter, .v-leave-to {
+    opacity: 0;
+}
+
+.demo-enter-active, .demo-leave-active {
+    transition: opacity 1s;
+}
+
+.demo-enter, .demo-leave-to {
+    opacity: 0;
+}
+
+.demo2-enter-active, .demo2-leave-active {
+    transition: opacity 1s, transform 1s;
+}
+
+.demo2-enter {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.demo2-leave-to {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.v-leave-active {
+    position: absolute;
+}

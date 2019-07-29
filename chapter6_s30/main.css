@@ -1,0 +1,35 @@
+[v-cloak] {
+    display: none;
+}
+
+/* .list-enter-active, .list-leave-active {
+    transition: opacity 1s;
+}
+
+.list-enter, .list-leave-to {
+    opacity: 0;
+} */
+
+/* .list-leave-active {
+    position: absolute;
+} */
+
+/* .list-move {
+    transition: transform 1s;
+}
+
+.v-move {
+    transition: transform 1s;
+} */
+
+.v-enter-active, .v-leave-active {
+    transition: all 1s;
+}
+
+.v-leave-active {
+    position: absolute;
+}
+
+.v-enter, .v-leave-to {
+    opacity: 0;
+}
